@@ -2,7 +2,10 @@ import { RootProvider } from "fumadocs-ui/provider/next";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import type { ReactNode } from "react";
 import { source } from "@/lib/source";
+import { Lora } from "next/font/google";
 import "./global.css";
+
+const lora = Lora({ subsets: ["latin"] });
 
 export const metadata = {
   title: "ChonkieJS Documentation",
@@ -12,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className={lora.className}>
         <RootProvider>
           <DocsLayout
             tree={source.pageTree}
