@@ -5,11 +5,8 @@
   "icon": "BookOpen",
   "pages": [
     "index",
-    "---Getting Started---",
     "getting-started",
-    "---Chunkers---",
     "chunkers",
-    "---API Reference---",
     "api"
   ]
 }
