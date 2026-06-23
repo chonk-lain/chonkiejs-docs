@@ -1,0 +1,16 @@
+{
+  "title": "Handshakes",
+  "pages": [
+    "overview",
+    "chroma",
+    "pinecone",
+    "qdrant",
+    "weaviate",
+    "milvus",
+    "mongodb",
+    "elasticsearch",
+    "lancedb",
+    "turbopuffer",
+    "pgvector"
+  ]
+}
