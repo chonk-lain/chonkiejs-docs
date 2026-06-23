@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "ChonkieJS Documentation",
   description: "The lightweight JavaScript chunking library for RAG pipelines",
   icons: {
-    icon: "/icon.svg",
+    icon: "https://www.chonkie.ai/chonkies/chonkie_icon.svg",
   },
   openGraph: {
     title: "ChonkieJS Documentation",
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             nav={{
               title: (
                 <>
-                  <img src="/icon.svg" alt="ChonkieJS" width={24} height={24} />
+                  <img src="https://www.chonkie.ai/chonkies/chonkie_icon.svg" alt="ChonkieJS" width={24} height={24} />
                   <span>ChonkieJS</span>
                 </>
               ),
