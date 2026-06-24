@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <RootProvider>
+        <RootProvider search={{ options: { type: "static" } }}>
           <DocsLayout
             tree={source.pageTree}
             nav={{

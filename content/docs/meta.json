@@ -9,6 +9,7 @@
     "chunkers",
     "handshakes",
     "api",
+    "troubleshooting",
     "changelog"
   ]
 }

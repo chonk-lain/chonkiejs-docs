@@ -1,6 +1,7 @@
 {
   "title": "Chunkers",
   "pages": [
+    "choosing-a-chunker",
     "overview",
     "recursive-chunker",
     "token-chunker",
