@@ -3,10 +3,10 @@ import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { source } from "@/lib/source";
-import { Lora } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./global.css";
 
-const lora = Lora({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://js.docs.chonkie.ai"),
@@ -29,15 +29,26 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={lora.className}>
+      <body className={inter.className}>
         <RootProvider>
           <DocsLayout
             tree={source.pageTree}
             nav={{
               title: (
                 <>
-                  <img src="https://www.chonkie.ai/chonkies/chonkie_icon.svg" alt="ChonkieJS" width={24} height={24} />
-                  <span>ChonkieJS</span>
+                  <div className="relative">
+                    <img
+                      src="https://www.chonkie.ai/chonkies/chonkie_icon.svg"
+                      alt="ChonkieJS"
+                      width={28}
+                      height={28}
+                      className="rounded-sm"
+                    />
+                    <span className="absolute -bottom-0.5 -right-1.5 text-[8px] font-bold leading-none bg-fd-primary text-fd-primary-foreground rounded px-0.5">
+                      JS
+                    </span>
+                  </div>
+                  <span className="font-semibold">ChonkieJS</span>
                 </>
               ),
             }}
