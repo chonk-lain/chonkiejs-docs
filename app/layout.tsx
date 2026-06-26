@@ -3,10 +3,13 @@ import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { source } from "@/lib/source";
-import { Inter } from "next/font/google";
+import { Lora } from "next/font/google";
 import "./global.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-lora",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://js.docs.chonkie.ai"),
@@ -29,7 +32,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${lora.className} ${lora.variable}`}>
         <RootProvider search={{ options: { type: "static" } }}>
           <DocsLayout
             tree={source.pageTree}
@@ -48,12 +51,16 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                       JS
                     </span>
                   </div>
-                  <span className="font-semibold">ChonkieJS</span>
+                  <span>ChonkieJS</span>
                 </>
               ),
             }}
             githubUrl="https://github.com/chonkie-inc/chonkie"
             links={[
+              {
+                text: "Python docs",
+                url: "https://docs.chonkie.ai/docs/python/quick-start",
+              },
               { text: "Discord", url: "https://discord.gg/Q6zkP8w6ur" },
             ]}
           >
