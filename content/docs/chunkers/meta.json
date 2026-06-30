@@ -1,5 +1,6 @@
 {
   "title": "Chunkers",
+  "icon": "Scissors",
   "pages": [
     "choosing-a-chunker",
     "overview",

@@ -32,7 +32,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${lora.className} ${lora.variable}`}>
+      <body
+        className={`${lora.className} ${lora.variable}`}
+        suppressHydrationWarning
+      >
         <RootProvider search={{ options: { type: "static" } }}>
           <DocsLayout
             tree={source.pageTree}
